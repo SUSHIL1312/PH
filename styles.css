@@ -1,0 +1,123 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    background-image: url('BackgroundRose.jpg');
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    font-family: Arial, sans-serif; /* Default font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Set height to fill viewport */
+}
+
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.cell {
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #eb7171;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s ease, transform-origin 0.5s ease, scale 0.5s ease; /* Added scale transition */
+    transform-origin: center center; /* Added transform origin */
+}
+
+.cell:hover {
+    transform: scale(1.1);
+}
+
+.cell.flipped {
+    transform: rotateY(180deg) scale(1.4); /* Flipped and scaled */
+}
+
+
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.cell img {
+    display: none; /* Initially hide all images */
+    max-width: 100%;
+    height: auto;
+}
+
+.cell.flipped img {
+    display: block; /* Display images after cell is flipped */
+}
+
+.cell-image {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden-image {
+    display: none;
+}
+
+.cell.flipped .cell-image {
+    display: none; /* Hide cell image after flipping */
+}
+
+.cell.flipped .hidden-image {
+    display: block; /* Display hidden image after flipping */
+}
