@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cell.addEventListener('click', (event) => {
             event.stopPropagation();
             if (!cell.classList.contains('flipped')) {
-                cell.style.transform = 'rotateY(360deg) scale(2.2)';
+                cell.style.transform = 'rotateY(360deg) scale(2.4)';
                 cell.classList.add('flipped');
             } else {
                 cell.style.transform = 'none';
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         const passkey = document.getElementById('passkey').value;
 
-        if (passkey === 'sushil') {
+        if (passkey === 'believe') {
             window.location.href = 'first.html'; // Redirect to first.html on successful verification
         } else {
             alert('Invalid passkey. Please try again.');
